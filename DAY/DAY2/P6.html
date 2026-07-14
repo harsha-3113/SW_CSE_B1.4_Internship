@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 1 - Unordered and Ordered Lists</title>
+</head>
+<body>
+
+    <!-- Main heading -->
+    <h1>Program 1: Unordered and Ordered Lists</h1>
+
+    <!-- Introduction -->
+    <p>
+        This program demonstrates the major concepts of unordered lists,
+        ordered lists, and nested lists.
+    </p>
+
+    <!-- Unordered list: basic usage -->
+    <h2>1. Unordered List (ul) with List Items (li)</h2>
+    <p>
+        The unordered list is used when the order of items does not matter.
+        Each item is written inside the li tag.
+    </p>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <!-- Ordered list: default numbering -->
+    <h2>2. Ordered List (ol) - Default Numbering</h2>
+    <p>
+        The ordered list is used when the order of items is important.
+        By default, the browser shows numbers for each item.
+    </p>
+
+    <ol>
+        <li>Step 1: Open the editor</li>
+        <li>Step 2: Write the HTML code</li>
+        <li>Step 3: Save and open in browser</li>
+    </ol>
+
+    <!-- Ordered list: different type variations -->
+    <h2>3. Ordered List Type Variations</h2>
+    <p>
+        The type attribute changes the style of the numbering.
+        Common values are 1, A, a, I and i.
+    </p>
+
+    <!-- Numbers 1, 2, 3 (default) -->
+    <ol type="1">
+        <li>First item (1)</li>
+        <li>Second item (2)</li>
+    </ol>
+
+    <!-- Uppercase letters A, B, C -->
+    <ol type="A">
+        <li>First option (A)</li>
+        <li>Second option (B)</li>
+    </ol>
+
+    <!-- Lowercase letters a, b, c -->
+    <ol type="a">
+        <li>First choice (a)</li>
+        <li>Second choice (b)</li>
+    </ol>
+
+    <!-- Uppercase Roman numerals I, II, III -->
+    <ol type="I">
+        <li>First chapter (I)</li>
+        <li>Second chapter (II)</li>
+    </ol>
+
+    <!-- Lowercase Roman numerals i, ii, iii -->
+    <ol type="i">
+        <li>First part (i)</li>
+        <li>Second part (ii)</li>
+    </ol>
+
+    <!-- Ordered list: custom starting number -->
+    <h2>4. Ordered List Starting from a Custom Number</h2>
+    <p>
+        The start attribute allows the list to begin from a specific number
+        instead of starting from 1.
+    </p>
+
+    <ol start="5">
+        <li>Item that is numbered 5</li>
+        <li>Item that is numbered 6</li>
+    </ol>
+
+    <!-- Nested lists: unordered list containing ordered list -->
+    <h2>5. Nested Lists (List inside List)</h2>
+    <p>
+        A list can be placed inside another list to show sub-items.
+        Here, an unordered list contains an ordered list as a sub-list.
+    </p>
+
+    <ul>
+        <li>Frontend Technologies
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+        </li>
+        <li>Backend Technologies</li>
+    </ul>
+
+    <!-- Nested lists: ordered list containing unordered list -->
+    <h2>6. Ordered List with Unordered Sub-list</h2>
+    <p>
+        In this example, each step in the ordered list contains its own
+        unordered list of details.
+    </p>
+
+    <ol>
+        <li>Plan the project
+            <ul>
+                <li>Define requirements</li>
+                <li>Choose technology stack</li>
+            </ul>
+        </li>
+        <li>Develop the project
+            <ul>
+                <li>Implement frontend</li>
+                <li>Implement backend</li>
+            </ul>
+        </li>
+    </ol>
+
+    <!-- Closing note -->
+    <p>
+        This program summarized the key ideas of unordered lists,
+        ordered lists, type variations, starting number, and nested lists.
+    </p>
+
+</body>
+</html>
