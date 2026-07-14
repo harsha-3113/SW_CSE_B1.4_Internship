@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Form Validation Example</title>
+</head>
+<body>
+
+<form id="loginForm" onsubmit="return validateLogin()">
+    <label for="user">Username:</label>
+    <input type="text" id="user" name="user" required>
+
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="pass" required>
+
+    <input type="submit" value="Login">
+</form>
+
+<script>
+function validateLogin() {
+    var user = document.getElementById("user").value;
+    var pass = document.getElementById("pass").value;
+
+    if (user === "" || pass === "") {
+        alert("Both username and password are required.");
+        return false; // prevent form submission
+    }
+
+    if (pass.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return false;
+    }
+
+    // If all checks pass, allow submission
+    return true;
+}
+</script>
+
+</body>
+</html>
