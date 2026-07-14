@@ -2,138 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Program 1 - Unordered and Ordered Lists</title>
+    <title>Program 2 - Description Lists and Variations</title>
 </head>
 <body>
 
     <!-- Main heading -->
-    <h1>Program 1: Unordered and Ordered Lists</h1>
+    <h1>Program 2: Description Lists and List Variations</h1>
 
     <!-- Introduction -->
     <p>
-        This program demonstrates the major concepts of unordered lists,
-        ordered lists, and nested lists.
+        This program explains description lists and shows different ways
+        to combine list types without repeating the concepts from Program 1.
     </p>
 
-    <!-- Unordered list: basic usage -->
-    <h2>1. Unordered List (ul) with List Items (li)</h2>
+    <!-- Description list: basic term-definition pairs -->
+    <h2>1. Description List (dl, dt, dd)</h2>
     <p>
-        The unordered list is used when the order of items does not matter.
-        Each item is written inside the li tag.
+        A description list is used to show pairs of terms and explanations,
+        such as glossary entries or key-value information.
+    </p>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Markup language used to structure web pages.</dd>
+
+        <dt>CSS</dt>
+        <dd>Style sheet language used to design the look of web pages.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Programming language used to add interactivity to web pages.</dd>
+    </dl>
+
+    <!-- Multiple descriptions for one term -->
+    <h2>2. One Term with Multiple Descriptions</h2>
+    <p>
+        A single term can have more than one description.
+        This is useful when the term needs additional clarification.
+    </p>
+
+    <dl>
+        <dt>API</dt>
+        <dd>Application Programming Interface.</dd>
+        <dd>Allows different software components to interact with each other.</dd>
+    </dl>
+
+    <!-- Multiple terms sharing one description -->
+    <h2>3. Multiple Terms Sharing a Description</h2>
+    <p>
+        More than one term can share the same description,
+        which can help express synonyms or related names.
+    </p>
+
+    <dl>
+        <dt>UI</dt>
+        <dt>User Interface</dt>
+        <dd>The visual part of a software that users interact with.</dd>
+    </dl>
+
+    <!-- Using lists to represent a simple navigation menu -->
+    <h2>4. Navigation Menu Using List</h2>
+    <p>
+        Lists can be used to represent menus.
+        Each menu item is a list item, and sub-menus are nested lists.
     </p>
 
     <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+        <li>Home</li>
+        <li>Courses
+            <ul>
+                <li>Web Development</li>
+                <li>Data Science</li>
+                <li>Machine Learning</li>
+            </ul>
+        </li>
+        <li>Contact</li>
     </ul>
 
-    <!-- Ordered list: default numbering -->
-    <h2>2. Ordered List (ol) - Default Numbering</h2>
+    <!-- Combining ordered, unordered, and description lists on one page -->
+    <h2>5. Combining All List Types in One Structured Section</h2>
     <p>
-        The ordered list is used when the order of items is important.
-        By default, the browser shows numbers for each item.
+        This section combines unordered, ordered, and description lists
+        to present related information in different formats.
     </p>
 
-    <ol>
-        <li>Step 1: Open the editor</li>
-        <li>Step 2: Write the HTML code</li>
-        <li>Step 3: Save and open in browser</li>
-    </ol>
-
-    <!-- Ordered list: different type variations -->
-    <h2>3. Ordered List Type Variations</h2>
-    <p>
-        The type attribute changes the style of the numbering.
-        Common values are 1, A, a, I and i.
-    </p>
-
-    <!-- Numbers 1, 2, 3 (default) -->
-    <ol type="1">
-        <li>First item (1)</li>
-        <li>Second item (2)</li>
-    </ol>
-
-    <!-- Uppercase letters A, B, C -->
-    <ol type="A">
-        <li>First option (A)</li>
-        <li>Second option (B)</li>
-    </ol>
-
-    <!-- Lowercase letters a, b, c -->
-    <ol type="a">
-        <li>First choice (a)</li>
-        <li>Second choice (b)</li>
-    </ol>
-
-    <!-- Uppercase Roman numerals I, II, III -->
-    <ol type="I">
-        <li>First chapter (I)</li>
-        <li>Second chapter (II)</li>
-    </ol>
-
-    <!-- Lowercase Roman numerals i, ii, iii -->
-    <ol type="i">
-        <li>First part (i)</li>
-        <li>Second part (ii)</li>
-    </ol>
-
-    <!-- Ordered list: custom starting number -->
-    <h2>4. Ordered List Starting from a Custom Number</h2>
-    <p>
-        The start attribute allows the list to begin from a specific number
-        instead of starting from 1.
-    </p>
-
-    <ol start="5">
-        <li>Item that is numbered 5</li>
-        <li>Item that is numbered 6</li>
-    </ol>
-
-    <!-- Nested lists: unordered list containing ordered list -->
-    <h2>5. Nested Lists (List inside List)</h2>
-    <p>
-        A list can be placed inside another list to show sub-items.
-        Here, an unordered list contains an ordered list as a sub-list.
-    </p>
-
+    <!-- Unordered list of topics -->
+    <h3>5.1 Topics</h3>
     <ul>
-        <li>Frontend Technologies
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ol>
-        </li>
-        <li>Backend Technologies</li>
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>Database</li>
     </ul>
 
-    <!-- Nested lists: ordered list containing unordered list -->
-    <h2>6. Ordered List with Unordered Sub-list</h2>
-    <p>
-        In this example, each step in the ordered list contains its own
-        unordered list of details.
-    </p>
-
+    <!-- Ordered list of steps to learn a technology -->
+    <h3>5.2 Steps to Learn a Technology</h3>
     <ol>
-        <li>Plan the project
-            <ul>
-                <li>Define requirements</li>
-                <li>Choose technology stack</li>
-            </ul>
-        </li>
-        <li>Develop the project
-            <ul>
-                <li>Implement frontend</li>
-                <li>Implement backend</li>
-            </ul>
-        </li>
+        <li>Understand the basics</li>
+        <li>Practice small examples</li>
+        <li>Build a project</li>
     </ol>
+
+    <!-- Description list explaining key terms -->
+    <h3>5.3 Key Terms</h3>
+    <dl>
+        <dt>Framework</dt>
+        <dd>A collection of tools and guidelines that help build applications faster.</dd>
+
+        <dt>Library</dt>
+        <dd>A set of functions or features that can be reused inside a project.</dd>
+    </dl>
 
     <!-- Closing note -->
     <p>
-        This program summarized the key ideas of unordered lists,
-        ordered lists, type variations, starting number, and nested lists.
+        This program summarized description lists, multiple term/description patterns,
+        menu-like structures using lists, and the combined use of all list types.
     </p>
 
 </body>
