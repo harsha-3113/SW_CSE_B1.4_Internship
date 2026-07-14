@@ -1,8 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image tags</title>
+    <style>
+        .responsive-image {
+            max-width:100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- src: source alt: alternate text | Self-closing tag -->
@@ -11,7 +19,7 @@
     
     <!-- Common attributes & variations -->
      <!-- Width & height -->
-    <img src="i1.jpg" alt="Could not find the image" width="200px" height="100px"> 
+    <!-- <img src="i1.jpg" alt="Could not find the image" width="200px" height="100px">  -->
     <!-- Tooltip -->
     <img src="i1.jpg" alt="Could not find the image" title="Image of a Dog"> 
     <!-- Style -->
@@ -19,8 +27,9 @@
     style="width:200px; height:100px; border-radius:10%; border:2px solid #cd2323;"> 
 
     <!-- Image formats -->
-     <!-- 1.Jpg 2.PNG 3.GIF 4.SVG 5.webp -->
+    <!-- 1.Jpg 2.PNG 3.GIF 4.SVG 5.webp -->
 
-     
+    <!-- Responsive image via CSS -->
+    <img src="i1.jpg" alt="Could not find the image" class="responsive-image"> 
 </body>
 </html>
