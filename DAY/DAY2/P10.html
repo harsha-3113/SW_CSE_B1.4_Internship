@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <p>Forms are used to collect user input. And send it to a server for processing.</p>
+    <form action="/submit" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <input type="number" id="age" name="age" placeholder="Enter your age" min="18" max="100">
+        <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            
+            <input type="radio" id="option1" name="options" value="option1">
+            <label for="option1">Option 1</label>   
+            <input type="radio" id="option1" name="options" value="option1">
+            <label for="option2">Option 2</label>   
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="firstName">First Name*:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName"><br>
+        </fieldset>
+    </form>
+
+    <!-- Form Validation : client side -->
+    <p>The text entered in the form is it correct or not. 
+     <p>If it is correct then only it will be submitted to the server. 
+     Otherwise, it will show an error message.</p>
+        min, max, required, pattern, step, maxlength, minlength, 
+        type="email", type="url", type="number", type="date", type="time", 
+        type="datetime-local", type="month", type="week"</p>
+</body>
+</html>
