@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tag Program 1</title>
+</head>
+<body>
+
+    <!-- Main heading of the page -->
+    <h1>HTML Image Tag - Basic Concepts</h1>
+
+    <!-- This paragraph explains what this program demonstrates -->
+    <p>
+        This program explains the basic usage of the HTML img tag.
+        It covers source path, alternate text, width, height, and title attributes.
+    </p>
+
+    <hr>
+
+    <!-- Example 1: Basic image with src and alt -->
+    <h2>1. Basic Image</h2>
+    <p>
+        The src attribute tells the browser where the image file is located.
+        The alt attribute gives alternative text if the image cannot be displayed.
+    </p>
+
+    <img src="https://via.placeholder.com/250x150" alt="Sample placeholder image">
+
+    <hr>
+
+    <!-- Example 2: Image with width and height -->
+    <h2>2. Image with Width and Height</h2>
+    <p>
+        The width and height attributes control the displayed size of the image.
+        They help reserve space on the page before the image fully loads.
+    </p>
+
+    <img src="https://via.placeholder.com/300x200"
+         alt="Placeholder image with width and height"
+         width="300"
+         height="200">
+
+    <hr>
+
+    <!-- Example 3: Image with title -->
+    <h2>3. Image with Title Attribute</h2>
+    <p>
+        The title attribute usually shows a tooltip when the mouse is placed over the image.
+    </p>
+
+    <img src="https://via.placeholder.com/220x140"
+         alt="Placeholder image with tooltip"
+         title="This is a tooltip shown on hover">
+
+    <hr>
+
+    <!-- Example 4: Local path example -->
+    <h2>4. Local Image Path Example</h2>
+    <p>
+        This example shows how a local image path is written.
+        The image will display only if the file exists in the given folder.
+    </p>
+
+    <img src="images/nature.jpg" alt="Nature image from local folder" width="250" height="150">
+
+    <hr>
+
+    <!-- Example 5: Remote image URL example -->
+    <h2>5. Remote Image URL Example</h2>
+    <p>
+        Images can also be loaded from another website using a complete URL.
+    </p>
+
+    <img src="https://via.placeholder.com/260x160"
+         alt="Image loaded using complete URL"
+         width="260"
+         height="160">
+
+    <hr>
+
+    <!-- Example 6: Broken image to demonstrate alt text -->
+    <h2>6. Broken Image Example</h2>
+    <p>
+        This image source is intentionally incorrect.
+        If the image does not load, the browser shows the alternate text.
+    </p>
+
+    <img src="wrong-image-name.jpg" alt="This text appears because the image is missing">
+
+    <hr>
+
+    <!-- Closing note -->
+    <p>
+        Program 1 covered the fundamental and most frequently used img tag concepts.
+    </p>
+
+</body>
+</html>
