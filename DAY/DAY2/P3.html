@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tag Program 2</title>
+</head>
+<body>
+
+    <!-- Main heading -->
+    <h1>HTML Image Tag - Variations and Practical Usage</h1>
+
+    <!-- Introduction -->
+    <p>
+        This code explains practical and advanced variations of the HTML img tag.
+        It includes clickable images, figure captions, decorative images, lazy loading, and image maps.
+    </p>
+
+    <hr>
+
+    <!-- Example 1: Clickable image -->
+    <h2>1. Image as a Hyperlink</h2>
+    <p>
+        An image can be placed inside an anchor tag to make it clickable.
+        When the user clicks the image, the browser opens the linked page.
+    </p>
+
+    <a href="https://www.example.com" target="_blank">
+        <img src="i1.jpg"
+             alt="Clickable image that opens example website"
+             width="200"
+             height="120">
+    </a>
+
+    <hr>
+
+    <!-- Example 2: Figure and figcaption -->
+    <h2>2. Image with Caption</h2>
+    <p>
+        The figure element groups the image and its related caption.
+        The figcaption element provides a visible caption for the image.
+    </p>
+
+    <figure>
+        <img src="i1.jpg"
+             alt="Mountain view placeholder image"
+             width="280"
+             height="160">
+        <figcaption>This is a caption displayed below the image.</figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- Example 3: Decorative image -->
+    <h2>3. Decorative Image</h2>
+    <p>
+        If an image is only for decoration and adds no content meaning,
+        an empty alt attribute can be used.
+    </p>
+
+    <img src="https://via.placeholder.com/100x100"
+         alt=""
+         width="100"
+         height="100">
+
+    <hr>
+
+    <!-- Example 4: Lazy loading -->
+    <h2>4. Image with Lazy Loading</h2>
+    <p>
+        The loading attribute can delay image loading until the image is near the visible area of the page.
+        This can improve page performance.
+    </p>
+
+    <img src="https://via.placeholder.com/300x180"
+         alt="Lazy loaded sample image"
+         width="300"
+         height="180"
+         loading="lazy">
+
+    <hr>
+
+    <!-- Example 5: Image map -->
+    <h2>5. Image Map</h2>
+    <p>
+        An image map allows different areas of one image to act as different clickable links.
+        The usemap attribute connects the image with the map element.
+    </p>
+
+    <img src="https://via.placeholder.com/400x200"
+         alt="Sample image map"
+         usemap="#samplemap"
+         width="400"
+         height="200">
+
+    <map name="samplemap">
+        <!-- Rectangular clickable area -->
+        <area shape="rect"
+              coords="0,0,200,200"
+              href="https://www.example.com"
+              alt="Left side clickable area"
+              target="_blank">
+
+        <!-- Circular clickable area -->
+        <area shape="circle"
+              coords="300,100,50"
+              href="https://www.wikipedia.org"
+              alt="Circular clickable area"
+              target="_blank">
+    </map>
+
+    <hr>
+
+    <!-- Example 6: Image inside a paragraph explanation -->
+    <h2>6. Meaningful Content Image</h2>
+    <p>
+        If the image carries information, the alt text should describe that information clearly.
+    </p>
+
+    <img src="https://via.placeholder.com/250x150"
+         alt="Bar chart placeholder representing quarterly sales data"
+         width="250"
+         height="150">
+
+</body>
+</html>
