@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form with HTML Validation</title>
+</head>
+<body>
+
+<h1>User Registration</h1>
+
+<form action="/register" method="post">
+
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <p>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"
+                   required minlength="3" maxlength="50">
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="age">Age (18–60):</label><br>
+            <input type="number" id="age" name="age"
+                   min="18" max="60" required>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Account Details</legend>
+
+        <p>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"
+                   required minlength="3" maxlength="15">
+        </p>
+
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"
+                   required minlength="6">
+        </p>
+
+        <p>
+            <label for="phone">Phone (10 digits):</label><br>
+            <input type="tel" id="phone" name="phone"
+                   pattern="[0-9]{10}" required>
+        </p>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </p>
+
+</form>
+
+</body>
+</html>
