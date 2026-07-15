@@ -14,6 +14,21 @@
     3. WAV    
     -->
 
-    
+    <!-- Autoplay -->
+    <audio src="sample-3s.mp3" autoplay controls>Your browser does not support the audio tag</audio>
+
+    <!-- muted -->
+    <audio src="sample-3s.mp3" autoplay muted>Your browser does not support the audio tag</audio>
+
+    <!-- loop -->
+    <audio src="sample-3s.mp3" loop controls>Your browser does not support the audio tag</audio>
+ 
+    <!-- Preload -->
+    <!-- none: Don't preload; load only when user starts playing -->
+    <!-- metadata: Load only information like duration, dimensions etc -->
+    <!-- auto: Automatic: Browser load video immediately -->
+    <audio src="sample-3s.mp3" preload="none" controls>
+        Your browser does not support the video tag
+    </audio>
 </body>
 </html>
