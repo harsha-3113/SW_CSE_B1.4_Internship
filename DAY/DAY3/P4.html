@@ -25,5 +25,29 @@
     <video src="sample-5s-360p.mp4" width="880" height="520" autoplay controls>
         Your browser does not support the video tag
     </video>
+
+    <!-- muted -->
+    <video src="sample-5s-360p.mp4" width="880" height="520" autoplay muted controls>
+        Your browser does not support the video tag
+    </video>
+
+    <!-- loop -->
+     <video src="sample-5s-360p.mp4" width="880" height="520" loop autoplay controls>
+        Your browser does not support the video tag
+    </video>
+
+    <!-- poster -->
+    <video src="sample-5s-360p.mp4" width="880" height="520" poster="video.png" muted autoplay controls>
+        Your browser does not support the video tag
+    </video>
+
+    <!-- Preload -->
+    <!-- none: Don't preload; load only when user starts playing -->
+    <!-- metadata: Load only information like duration, dimensions etc -->
+    <!-- auto: Automatic: Browser load video immediately -->
+    <video src="sample-5s-360p.mp4" width="880" height="520" poster="video.png" muted 
+     preload="none" controls>
+        Your browser does not support the video tag
+    </video>
 </body>
 </html>
