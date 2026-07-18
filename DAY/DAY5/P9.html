@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units All in one example</title>
+    <style>
+        html{
+            font-size:16px;
+        }
+        body{
+            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: aquamarine;
+            max-width: 1200px; /* fixed max width */
+            width: 90%; /* flexible within max-width */
+            margin: 0 auto;
+            padding: 2rem 1rem; /* vertical & horizontal padding */
+        }
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 0.5em; /* relative to parent tag*/
+        }
+        p{
+            font-size: 1rem;
+            line-height:1.6;
+            max-width:65px;
+        }
+        .hero{
+            height: 50vh; /*50% of viewport height*/
+            font-size: 5vw;  /*responsive text*/
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Rakesh K R</h1>
+    </div>
+    <div class="container">
+        <h2>CSS Units</h2>
+        <p>Example for CSS Units usage</p>
+    </div>
+</body>
+</html>
