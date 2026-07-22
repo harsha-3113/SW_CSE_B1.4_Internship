@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox: Justify-content & align-items</title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            gap: 10px;
+            
+            justify-content: center; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+        }
+        .item{
+            background-color: rgb(160, 225, 6);
+            padding: 15px;
+        }
+        .container1{
+            display: flex;
+            border: 2px solid rgb(204, 255, 0);
+            padding: 10px;
+            gap: 10px;
+            height: 200px;
+            align-items: baseline; /* center | strech | flex-start | flex-end | baseline*/
+        }
+        .item1{
+            background-color: rgb(228, 197, 197);
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <br>
+    <div class="container1">
+        <div class="item1">Item 1</div>
+        <div class="item1">Item 2</div>
+        <div class="item1">Item 3</div>
+    </div>
+</body>
+</html>
