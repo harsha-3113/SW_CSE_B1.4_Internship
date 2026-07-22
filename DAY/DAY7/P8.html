@@ -8,21 +8,38 @@
     <style>
         .basic-grid{
             display: grid;
-            /*grid-template-columns: repeat(3,1fr);*/
+            /* grid-template-columns: 200px 200px 100px; */
+            grid-template-columns: repeat(3,1fr);
             grid-template-rows: repeat(2,90px);
             background-color: cadetblue;
             padding: 10px 20px;
             border: 1px solid black;
-            /*gap:12px;*/
-            row-gap : 10px;
-            column-gap : 20px
+            /* gap:12px; */
+            /* row-gap,column-gap */
+            row-gap: 10px;
+            column-gap: 20px;
         }
         .box{
             background-color: burlywood;
             padding: 15px;
             text-align:center;
         }
-       
+       .grid2{ 
+        /* justify-content & align-content */
+            display: grid;
+            /* grid-template-columns: 200px 200px 100px; */
+            grid-template-columns: repeat(3,100px);
+            grid-template-rows: repeat(2,90px);
+            width: 400px;
+            height: 250px;
+            justify-content: center; /* center grid horizontally in the container*/
+            align-content: center; /* center grid vertically in the container */
+            background-color: rgb(217, 197, 243);
+            padding: 10px 20px;
+            border: 1px solid black;
+            gap:12px;
+            
+        }
     </style>
 </head>
 
@@ -30,6 +47,17 @@
 
     <section>
         <div class="basic-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </section>
+    <section>
+          <!-- /* justify-content & align-content */ -->
+        <div class="grid2">
             <div class="box">1</div>
             <div class="box">2</div>
             <div class="box">3</div>
