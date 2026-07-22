@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox: flex-item properties</title>
+    <style>
+     /* ========== NAVIGATION BAR (Pattern) ========== */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: burlywood;
+            padding: 10px 20px;
+            color: crimson;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: chocolate;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: black;
+            background-color: chartreuse;
+        }
+
+        /* ========== COMMON DEMO STYLES ========== */
+        .demo-section {
+            padding: 20px;
+        }
+
+        .flex-demo-container {
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            gap: 10px;
+            margin-bottom: 25px;
+            background: #fff;
+        }
+
+        .item {
+            background-color: bisque;
+            padding: 15px;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* ========== 1. flex-grow (sidebar + main) ========== */
+        .sidebar {
+            flex: 0 0 150px; /* fixed width, no grow, no shrink */
+            background-color: cadetblue;
+        }
+
+        .main {
+            flex: 1 1 0; /* grow to fill remaining space */
+            background-color: aquamarine;
+        }
+
+        /* ========== 2. flex-shrink ========== */
+        .shrink-container {
+            display: flex;
+            width: 260px; /* narrow to force shrinking */
+        }
+
+        .shrink-item {
+            flex-shrink: 1;
+            background-color: lightcoral;
+        }
+
+        .no-shrink {
+            flex-shrink: 0; /* do not shrink */
+            background-color: coral;
+        }
+
+        /* ========== 3. flex-basis ========== 
+        Sets the initial main size of a flex item before grow or shrink
+        */
+        .basis-container {
+            display: flex;
+        }
+
+        .basis-item {
+            background-color: lightgreen;
+            flex: 0 0 100px; /* fixed basis 100px */
+        }
+
+        .basis-item-wide {
+            background-color: mediumseagreen;
+            flex: 0 0 200px; /* fixed basis 200px */
+        }
+
+        /* ========== 4. flex shorthand (grow, shrink, basis) ========== */
+        .shorthand-container {
+            display: flex;
+        }
+
+        .shorthand-item {
+            flex: 1 1 0; /* grow equally */
+            background-color: rgb(24, 181, 29);
+        }
+
+        .shorthand-item-wide {
+            flex: 2 1 0; /* grow twice as much */
+            background-color: skyblue;
+        }
+
+        .shorthand-fixed {
+            flex: 0 0 120px; /* fixed size */
+            background-color: rgb(255, 68, 30);
+        }
+
+        /* ========== 5. align-self ========== */
+        .align-self-container {
+            display: flex;
+            align-items: center; /* default: center all items vertically */
+            height: 150px;
+        }
+
+        .align-item {
+            background-color: rgb(47, 167, 85);
+            min-width: 80px;
+        }
+
+        .align-top {
+            align-self: flex-start; /* override to top */
+            background-color: orchid;
+        }
+
+        .align-bottom {
+            align-self: flex-end; /* override to bottom */
+            background-color: violet;
+        }
+
+        /* ========== 6. order ========== */
+        .order{
+            display: flex;
+        }
+
+        .order-item {
+            background-color: rgb(241, 160, 9);
+            min-width: 80px;
+        }
+
+        .order-first {
+            order: -1; /* -1: appears first visually| 1 | 2 | Default: 0 */
+            background-color: rgb(173, 132, 235);
+        }
+    </style>
+</head>
+<body>
+
+    <p class="info">
+        flex-item properties:<br>
+        - flex-grow [0: don't grow | 1: grow equally | 2: grow twice as much]<br>
+        - flex-shrink [1: shrink if needed | 0: don't shrink]<br>
+        - flex-basis [initial size before grow/shrink]<br>
+        - flex shorthand [flex-grow, flex-shrink, flex-basis]<br>
+        - align-self [override container alignment for one item]<br>
+        - order [change visual order without changing HTML]<br><br>
+
+        Flexbox patterns:<br>
+        1. Center both horizontally & vertically<br>
+        2. Simple navigation bar<br>
+        3. Responsive card layout<br>
+        4. Two-column layout (sidebar + main)
+    </p>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="demo-section">
+        <!-- 1. flex-grow -->
+        <h2>1. flex-grow (sidebar + main)</h2>
+        <div class="flex-demo-container">
+            <div class="item sidebar">Sidebar (fixed)</div>
+            <div class="item main">Main (grows)</div>
+        </div>
+
+        <!-- 2. flex-shrink -->
+        <h2>2. flex-shrink (narrow container)</h2>
+        <div class="flex-demo-container shrink-container">
+            <div class="item shrink-item">Item 1</div>
+            <div class="item shrink-item no-shrink">Item 2 (no shrink)</div>
+            <div class="item shrink-item">Item 3</div>
+        </div>
+
+        <!-- 3. flex-basis -->
+        <h2>3. flex-basis (fixed starting sizes)</h2>
+        <div class="flex-demo-container basis-container">
+            <div class="item basis-item">100px</div>
+            <div class="item basis-item-wide">200px</div>
+            <div class="item basis-item">100px</div>
+        </div>
+
+        <!-- 4. flex shorthand -->
+        <h2>4. flex shorthand (grow, shrink, basis)</h2>
+        <div class="flex-demo-container shorthand-container">
+            <div class="item shorthand-item">A</div>
+            <div class="item shorthand-item-wide">B (wider)</div>
+            <div class="item shorthand-fixed">C (fixed)</div>
+            <div class="item shorthand-item">D</div>
+        </div>
+
+        <!-- 5. align-self -->
+        <h2>5. align-self (override vertical alignment)</h2>
+        <div class="flex-demo-container align-self-container">
+            <div class="item align-item">Item 1</div>
+            <div class="item align-item align-top">Item 2 (top)</div>
+            <div class="item align-item">Item 3</div>
+            <div class="item align-item align-bottom">Item 4 (bottom)</div>
+        </div>
+
+        <!-- 6. order -->
+        <h2>6. order (change visual order)</h2>
+        <div class="flex-demo-container     ">
+            <div class="item order-item">Item 1</div>
+            <div class="item order-item order-first">Item 2 (first)</div>
+            <div class="item order-item">Item 3</div>
+        </div>
+    </section>
+
+</body>
+</html>
