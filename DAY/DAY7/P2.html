@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex & Direction</title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            gap: 10px;
+
+            flex-direction: column-reverse; /*  row(default) | row-reverse | column | column-reverse */
+        }
+        .item{
+            background-color: burlywood;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
