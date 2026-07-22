@@ -28,15 +28,40 @@
         background-color: chartreuse;
        }
 
+       /* Flex items example */
+       .demo-section{
+        padding: 20px;
+       }
+       .flex-demo-container{
+        display: flex;
+        border: 2px solid black;
+        padding: 10px;
+        gap: 10px;
+
+       }
+       .item{
+        background-color: bisque;
+        padding: 15px;
+        text-align: center;
+        min-width: 80px;
+       }
+       .sidebar{
+        flex: 0 0 150px; /* fixed width, no grow, no shrink */
+        background-color: cadetblue;
+       }
+       .main{
+        flex: 1 1 0; /* grow to fill remaining space */
+        background-color: aquamarine;
+       }
     </style>
 </head>
 <body>
     <p>
         flex-item properties:
-        flex-grow
+        flex-grow [0: don't grow | 1: grow equally with other items that also have 1 | 2: grow twice as much as items with 1]
         flex-shrink
         flex-basis
-        flex shorthand
+        flex shorthand [flex-grow, flex-shrink, flex-basis]
         align-self
         order
 
@@ -53,5 +78,14 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
+
+    <section class="demo-section">
+        <h2>1. flex-grow</h2>
+        <div class="flex-demo-container">
+            <div class="item sidebar">sidebar(fixed)</div>
+            <div class="item main"></div>
+        </div>
+
+    </section>
 </body>
 </html>
