@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid container properties</title>
     <style>
-        .basic-grid{
+        section{
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .basic-grid {
             display: grid;
             /* grid-template-columns: 200px 200px 100px; */
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(2,90px);
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 90px);
             background-color: cadetblue;
             padding: 10px 20px;
             border: 1px solid black;
@@ -19,26 +23,41 @@
             row-gap: 10px;
             column-gap: 20px;
         }
-        .box{
+
+        .box {
             background-color: burlywood;
             padding: 15px;
-            text-align:center;
+            text-align: center;
         }
-       .grid2{ 
-        /* justify-content & align-content */
+
+        .grid2 {
+            /* justify-content & align-content */
             display: grid;
             /* grid-template-columns: 200px 200px 100px; */
-            grid-template-columns: repeat(3,100px);
-            grid-template-rows: repeat(2,90px);
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 90px);
             width: 400px;
             height: 250px;
-            justify-content: center; /* center grid horizontally in the container*/
-            align-content: center; /* center grid vertically in the container */
+            justify-content: center;
+            /* center grid horizontally in the container*/
+            align-content: center;
+            /* center grid vertically in the container */
             background-color: rgb(217, 197, 243);
             padding: 10px 20px;
             border: 1px solid black;
-            gap:12px;
-            
+            gap: 12px;
+
+        }
+        /* align-items & Justify items */ 
+         .grid3{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 90px);
+            align-items: center;  /* vertical alignment in cell*/
+            justify-items: center; /* horizontal alignment in cell*/
+            background-color: rgb(237, 118, 79);
+            border: 1px solid black;
+            gap: 10px;
         }
     </style>
 </head>
@@ -56,7 +75,7 @@
         </div>
     </section>
     <section>
-          <!-- /* justify-content & align-content */ -->
+        <!-- /* justify-content & align-content */ -->
         <div class="grid2">
             <div class="box">1</div>
             <div class="box">2</div>
@@ -66,7 +85,17 @@
             <div class="box">6</div>
         </div>
     </section>
-
+    <section>
+        <!-- /* align-items & Justify items */ -->
+        <div class="grid3">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </section>
 </body>
 
 </html>
