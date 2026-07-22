@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid container properties</title>
+    <style>
+        .basic-grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,90px);
+            background-color: cadetblue;
+            padding: 10px 20px;
+            border: 1px solid black;
+            gap:12px;
+        }
+        .box{
+            background-color: burlywood;
+            padding: 15px;
+            text-align:center;
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="basic-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </section>
+
+</body>
+
+</html>
