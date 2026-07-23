@@ -2,20 +2,20 @@
 var x = 10;
 var x = 20;
 x = 30;
-console.log(x)
+// console.log(x)
 
 if (true) {
     var message = "Hello";
 }
 // var in JS is not block-scoped
-console.log(message);
+// console.log(message);
 
 // ****************************************************
 // let keyword based variable
 let score = 100;
 //let score = 100; //SyntaxError: Identifier 'score' has already been declared
 score = 160; // re-assignment is valid
-console.log(score)
+// console.log(score)
 
 if(true){
     let secret = "Password@123"; // let in JS is block-scoped
@@ -28,4 +28,22 @@ if(true){
     //pi = 27 //TypeError: Assignment to constant variable.
 }
 // const in JS is block-scoped //ReferenceError: pi is not defined
-console.log(pi) 
+// console.log(pi) 
+
+
+// var: function scoped | Not recommended 
+// let & const: block-scoped
+
+// var: function scoped
+function test(){
+    if(true){
+        var a = 10;
+        let b = 20;
+        const c = 30;
+    }
+    // console.log(a); //worked
+    // console.log(b); //not worked
+    // console.log(c); //not worked
+}
+// console.log(a);
+test()
