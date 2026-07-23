@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Effects Demo</title>
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --card-color: white;
+      --main-color: steelblue;
+      --hover-color: tomato;
+      --text-color: #222;
+      --radius: 12px;
+      --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: var(--card-color);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      width: 300px;
+      animation: pulse 2s infinite ease-in-out;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #eef6ff;
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: var(--main-color);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .button:hover {
+      background: var(--hover-color);
+      transform: translateY(-3px);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.02);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>CSS Effects Demo</h2>
+    <p>This card uses variables, transitions, transforms, and animation.</p>
+    <button class="button">Hover Me</button>
+  </div>
+</body>
+</html>
